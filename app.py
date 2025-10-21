@@ -44,11 +44,9 @@ def allowed_file(filename):
 
 # --- ROTAS ---
 
-@app.route("/")
+@app.route('/')
 def index():
-	"""Renderiza a página HTML principal."""
-	# O FLASK VAI PROCURAR POR 'templates/index.html'
-	return render_template("index.html")
+    return {"status": "API online"}
 
 # ROTA: Lida com o upload do arquivo
 @app.route("/api/upload", methods=["POST"])
